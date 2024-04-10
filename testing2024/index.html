@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Ejemplo de javascript</h2>
+
+<p>Ingresar un numero entre 1 y 10 :</p>
+
+<input id="num">
+<button type="button" onclick="funcion1()">Enviar</button>
+
+
+
+<p id="demo"></p>
+
+<p id="res"></p>
+
+<script>
+function funcion1() {
+  //Toma el valor del input con el id="num" y lo guarda en la variable x
+  let x = document.getElementById("num").value.parseInt;
+  // chequea el valor ingesado
+  let text;
+  if ( x < 1 || x > 10) // tengo tres condiciones con que una sea verdadera entra al if
+  {     // isNaN(x) pregunta si no es un nro
+    text = "Ingreso no valido";
+  } 
+  else 
+  {
+    text = "Ingreso valido";
+  }
+
+  x = x+1
+  document.getElementById("demo").innerHTML = text;
+  document.getElementById("res").innerHTML = x.toString();// convierte a string para mostrarlo
+}
+</script>
+
+</body>
+</html> 
